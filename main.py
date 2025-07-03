@@ -1,7 +1,9 @@
 import pygame
 import math
 from game import Game
+
 pygame.init()
+pygame.mixer.init()
 
 # Fenêtre du jeu
 pygame.display.set_caption("Pouf Fall Game")

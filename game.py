@@ -25,6 +25,9 @@ class Game :
         # Touches actionnées
         self.pressed = {}
 
+        # Effets sonores
+        self.bell_sound = pygame.mixer.Sound('assets/sounds/bell.wav')
+
     def start(self):
         self.is_playing = True
         self.spawn_beer()
@@ -36,9 +39,11 @@ class Game :
         self.all_beers = pygame.sprite.Group()
         self.all_guards = pygame.sprite.Group()
         self.teddy.health = self.teddy.max_health
+        self.teddy.rect.x = 420
         self.pouf_event.all_poufs = pygame.sprite.Group()
         self.pouf_event.reset_percent()
         self.is_playing = False
+        pygame.mixer.music.stop()
 
     def update(self, screen):
         # Affichage du joueur

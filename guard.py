@@ -8,11 +8,11 @@ class Guard(pygame.sprite.Sprite):
         self.health = 100
         self.max_health = 100
         self.attack = 0.3
-        self.image = pygame.image.load('assets/guard.png')
-        self.image = pygame.transform.scale(self.image, (300, 300))
+        self.image = pygame.image.load('assets/keep_the_beers.png')
+        self.image = pygame.transform.scale(self.image, (250, 250))
         self.rect = self.image.get_rect()
         self.rect.x = - random.randint(0, 300)
-        self.rect.y = 400
+        self.rect.y = 425
         self.velocity = random.randint(1, 3)
 
     def damage(self, amount):
@@ -20,7 +20,7 @@ class Guard(pygame.sprite.Sprite):
         if self.health <= 0:
             # Suppression du monstre actuel et apparition d'un nouveau
             self.rect.x = - random.randint(0, 300)
-            self.velocity = random.randint(1, 3)
+            self.velocity = random.randint(1, 4)
             self.health = self.max_health
             # Si la bar d'événement chargée au max --> on ne fait plus apparaitre de monstre
             if self.game.pouf_event.is_full_loaded():

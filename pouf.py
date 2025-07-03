@@ -15,9 +15,11 @@ class Pouf(pygame.sprite.Sprite):
     def remove(self):
         self.pouf_event.all_poufs.remove(self)
 
-        # Si plus de poufs --> Reset la barre d'évènement + Réapparition des bieres
+        # Si plus de poufs = Fin de la pluie de poufs --> Reset la barre d'évènement + Réapparition des bieres
         if len(self.pouf_event.all_poufs) == 0:
-            print("Fin de la pluie de pouf.")
+            # Arrêt de la triviata
+            pygame.mixer.music.fadeout(2000)  # fondu sur 2 secondes
+
             self.pouf_event.reset_percent()
             self.pouf_event.game.spawn_beer()
             self.pouf_event.game.spawn_beer()
@@ -30,9 +32,8 @@ class Pouf(pygame.sprite.Sprite):
         if self.rect.y >= 550:
             self.remove()
 
-            # Si plus de pouf
+            # Fin de la pluie de pouf
             if len(self.pouf_event.all_poufs) == 0:
-                print("Fin de la pluie de pouf.")
                 self.pouf_event.reset_percent()
                 self.pouf_event.fall_mode = False
 

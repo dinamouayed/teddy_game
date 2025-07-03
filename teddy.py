@@ -12,7 +12,7 @@ class Teddy(pygame.sprite.Sprite):
         self.image = pygame.image.load('assets/teddy_bear.png')
         self.image = pygame.transform.scale(self.image, (250, 250))
         self.rect = self.image.get_rect()
-        self.rect.x = 320
+        self.rect.x = 420
         self.rect.y = 450
         self.all_projectiles_right = pygame.sprite.Group()
         self.all_projectiles_left = pygame.sprite.Group()

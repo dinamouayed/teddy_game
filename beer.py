@@ -18,6 +18,8 @@ class Beer(pygame.sprite.Sprite):
     def damage(self, amount):
         self.health -= amount
         if self.health <= 0:
+            # Bruitage quand le monstre meurt
+            self.game.bell_sound.play()
             # Suppression du monstre actuel et apparition d'un nouveau
             self.rect.x = 1000 + random.randint(0, 300)
             self.velocity = random.randint(1, 3)
