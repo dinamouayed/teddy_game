@@ -47,5 +47,5 @@ class Projectile(pygame.sprite.Sprite):
             guard.damage(self.teddy.attack)
 
         # Suppression projectile s'il est hors de l'écran
-        if self.rect.x < 0 :
+        if self.rect.x < -15 :
             self.remove_left()
