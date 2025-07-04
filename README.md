@@ -1,11 +1,14 @@
 # 🎮 Teddy Game
 
 **Teddy Game** est un petit jeu 2D créé pour le **Pic'Asso**, qui reprend plusieurs références emblématiques de notre foyer :
-- Le logo Pic'Asso en arrière-plan
+- Le logo **Pic'Asso** en arrière-plan
 - **Teddy** comme joueur principal
 - Les **écocups** comme projectiles
 - Les **bières Filou** en adversaires
-- La **police** en adversaire également qui vient nous demander de faire moins de bruit à cause des voisins
+- **Une amie et moi-même** au Pic en adversaires
+- Les fameux **poufs** du Pic
+
+L'**objectif du jeu** est d'éliminer les adversaires arrivant depuis la gauche et la droite, et d'éviter les pluies de poufs.
 
 ---
 

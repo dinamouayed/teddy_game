@@ -25,7 +25,7 @@ class PoufFallEvent:
     def attempt_fall(self):
         # La jauge d'événement est totalement chargée + plus de guard/biere --> pluie de pouf
         if self.is_full_loaded() and len(self.game.all_beers) == 0:
-            # Lancement de la musique de l'évènement
+            # Lancement de la triviata
             pygame.mixer.music.load('assets/sounds/triviata.wav')
             pygame.mixer.music.play(-1, start=2.5) # -1 pour que ça soit une boucle infini + on commence le son à partir de la seconde 2.5
 

@@ -18,11 +18,11 @@ class Guard(pygame.sprite.Sprite):
     def damage(self, amount):
         self.health -= amount
         if self.health <= 0:
-            # Suppression du monstre actuel et apparition d'un nouveau
+            # Suppression des guards actuel et apparition d'un nouveau
             self.rect.x = - random.randint(0, 300)
             self.velocity = random.randint(1, 4)
             self.health = self.max_health
-            # Si la bar d'événement chargée au max --> on ne fait plus apparaitre de monstre
+            # Si la bar d'événement chargée au max --> on ne fait plus apparaitre de guard
             if self.game.pouf_event.is_full_loaded():
                 self.game.all_guards.remove(self)
                 # Déclencher la pluie

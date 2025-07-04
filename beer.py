@@ -25,7 +25,7 @@ class Beer(pygame.sprite.Sprite):
             self.rect.x = 1000 + random.randint(0, 300)
             self.velocity = random.randint(1, 3)
             self.health = self.max_health
-            # Si la bar d'événement chargée au max --> on ne fait plus apparaitre de monstre
+            # Si la bar d'événement chargée au max --> on ne fait plus apparaitre de biere
             if self.game.pouf_event.is_full_loaded():
                 self.game.all_beers.remove(self)
                 # Déclencher la pluie
@@ -40,9 +40,9 @@ class Beer(pygame.sprite.Sprite):
         pygame.draw.rect(surface, bar_color, bar_position)
 
     def forward(self):
-        # Déplacement seulement si pas de collision avec le teddy
+        # Déplacement seulement si pas de collision avec teddy
         if not self.game.check_collision(self, self.game.all_teddys):
             self.rect.x -= self.velocity
-        # Monstre en collision avec le joueur --> Dégat pour le joueur
+        # Biere en collision avec le joueur --> Dégat pour le joueur
         else:
             self.game.teddy.damage(self.attack)

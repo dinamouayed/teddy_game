@@ -15,7 +15,7 @@ class Pouf(pygame.sprite.Sprite):
     def remove(self):
         self.pouf_event.all_poufs.remove(self)
 
-        # Si plus de poufs = Fin de la pluie de poufs --> Reset la barre d'évènement + Réapparition des bieres
+        # Si plus de poufs = Fin de la pluie de poufs --> Reset la barre d'évènement + Réapparition des bieres / guards
         if len(self.pouf_event.all_poufs) == 0:
             # Arrêt de la triviata
             pygame.mixer.music.fadeout(2000)  # fondu sur 2 secondes

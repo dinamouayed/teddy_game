@@ -43,6 +43,6 @@ class Teddy(pygame.sprite.Sprite):
             self.rect.x += self.velocity
 
     def move_left(self):
-        # Mouvement seulement si pas de collision avec un group de sprite (beer)
+        # Mouvement seulement si pas de collision avec un group de sprite (guard)
         if not self.game.check_collision(self, self.game.all_guards):
             self.rect.x -= self.velocity

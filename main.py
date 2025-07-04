@@ -10,7 +10,7 @@ pygame.display.set_caption("Pouf Fall Game")
 screen = pygame.display.set_mode((1080, 720))
 background = pygame.image.load('assets/bg_picasso.png')
 
-# Zoom fort : plus grand que l'écran
+# Zoom fort : plus grand que l'écran à cause des bords blancs
 zoomed_width = 1400
 zoomed_height = 1100
 background = pygame.transform.scale(background, (zoomed_width, zoomed_height))

@@ -28,7 +28,7 @@ class Projectile(pygame.sprite.Sprite):
         self.rect.x += self.velocity
         self.rotate()
 
-        # Si collision avec un monstre --> Supression du projectile + dégâts
+        # Si collision avec un adversaire --> Supression du projectile + dégâts
         for beer in self.teddy.game.check_collision(self, self.teddy.game.all_beers):
             self.remove_right()
             beer.damage(self.teddy.attack)
@@ -41,7 +41,7 @@ class Projectile(pygame.sprite.Sprite):
         self.rect.x -= self.velocity
         self.rotate()
 
-        # Si collision avec un monstre --> Supression du projectile + dégâts
+        # Si collision avec un adversaire --> Supression du projectile + dégâts
         for guard in self.teddy.game.check_collision(self, self.teddy.game.all_guards):
             self.remove_left()
             guard.damage(self.teddy.attack)

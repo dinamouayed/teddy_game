@@ -13,13 +13,13 @@ class Game :
         self.teddy = Teddy(self)
         self.all_teddys.add(self.teddy)
 
-        # Générer le groupe de monstre
+        # Générer le groupe da biere
         self.all_beers = pygame.sprite.Group()
 
         # Générer le groupe de guard
         self.all_guards = pygame.sprite.Group()
 
-        # Générer l'évenement pluie de pouf
+        # Générer l'évènement pluie de pouf
         self.pouf_event = PoufFallEvent(self)
 
         # Touches actionnées
@@ -82,7 +82,7 @@ class Game :
             pouf.fall()
         self.pouf_event.all_poufs.draw(screen)
 
-        # Déplacement du joueur
+        # Déplacement du joueur (teddy)
         if self.pressed.get(pygame.K_LEFT) and self.teddy.rect.x > 0:
             self.teddy.move_left()
         elif self.pressed.get(
