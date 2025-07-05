@@ -11,7 +11,7 @@ class Guard(pygame.sprite.Sprite):
         self.image = pygame.image.load('assets/keep_the_beers.png')
         self.image = pygame.transform.scale(self.image, (250, 250))
         self.rect = self.image.get_rect()
-        self.rect.x = - random.randint(-200, 300)
+        self.rect.x = - random.randint(0, 300)
         self.rect.y = 425
         self.velocity = random.randint(1, 3)
 
